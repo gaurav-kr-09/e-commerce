@@ -226,3 +226,7 @@
 .hide-quantityNupdate {
   display: none;
 }
+
+.remove-payment-summary{
+  display: none;
+}

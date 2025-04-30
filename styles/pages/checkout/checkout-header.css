@@ -94,6 +94,11 @@
 .checkout-header-right-section {
   text-align: right;
   width: 150px;
+  display: flex;
+}
+
+.checkout-header-right-section a {
+  margin-right: 0.75rem;
 }
 
 @media (max-width: 1000px) {
