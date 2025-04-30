@@ -203,7 +203,7 @@ const buisnessCart = new Cart('cart-buisness');
 
 // cart.#localStorageKey = 'test'; //Error dega kyuki ye private hai.
 
-console.log(cart);
-console.log(buisnessCart);
+// console.log(cart);
+// console.log(buisnessCart);
 
-console.log(buisnessCart instanceof Cart);
+// console.log(buisnessCart instanceof Cart);

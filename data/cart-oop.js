@@ -95,5 +95,5 @@ cart.loadFromStorage();
 
 BuisnessCart.loadFromStorage();
 
-console.log(cart);
-console.log(BuisnessCart);
+// console.log(cart);
+// console.log(BuisnessCart);
