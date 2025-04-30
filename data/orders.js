@@ -10,3 +10,4 @@ function saveToStorage() {
 }
 
 console.log(orders)
+console.log(orders.length);
