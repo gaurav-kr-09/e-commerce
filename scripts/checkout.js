@@ -2,7 +2,7 @@ import { renderOrderSumary } from "./checkout/orderSummary.js";
 import { renderPaymentSummary } from "./checkout/paymentSummary.js";
 // import { loadProducts } from "../data/products.js"
 import { loadProductsFetch } from "../data/products.js";
-import { loadCart } from "../data/cart.js";
+import { loadCart, loadCartFetch } from "../data/cart.js";
 // import '../data/cart-class.js';
 // import '../data/backend-practice.js'
 
@@ -135,27 +135,44 @@ loadPage().then((val) => {
 
 //upar wala sample code tha.
 
+// async function loadPage() {
+//   try{
+//     // throw 'error1' // iska error, niche wale catch k parameter me save hoga
+//     await loadProductsFetch();
+
+//   await new Promise((resolve, reject) => {
+//     // throw 'error2' // ye v error create kar dega and cart load nhi hoga.
+
+//     loadCart(() => {
+//       // reject('error3'); //isse bad me error create hoga.
+//       resolve();
+//     });
+
+//   });
+
+//   // await loadCart(() => {
+    
+//   // });
+
+//   } catch (error) {
+//     console.log('Unexpected error!\n Please try after some time')
+//   }
+  
+//   renderOrderSumary();
+//   renderPaymentSummary();
+// }
+
+// loadPage();
+
+
 async function loadPage() {
   try{
-    // throw 'error1' // iska error, niche wale catch k parameter me save hoga
+
     await loadProductsFetch();
-
-  await new Promise((resolve, reject) => {
-    // throw 'error2' // ye v error create kar dega and cart load nhi hoga.
-
-    loadCart(() => {
-      // reject('error3'); //isse bad me error create hoga.
-      resolve();
-    });
-
-  });
-
-  // await loadCart(() => {
-    
-  // });
+    await loadCartFetch();
 
   } catch (error) {
-    console.log('Unexpected error!\n Please try after some time')
+    console.log('Unexpected error!\n Please try after some time');
   }
   
   renderOrderSumary();
