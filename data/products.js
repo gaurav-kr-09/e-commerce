@@ -948,8 +948,6 @@ export function loadProducts(fun) {
       return new Product(productDetails);
     });
 
-    console.log('load products');
-    
     fun();
   });
 
