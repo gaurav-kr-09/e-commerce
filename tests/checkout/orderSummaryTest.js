@@ -107,16 +107,20 @@ describe('test suite: renderOrderSummary', () => {
   const productId1 = 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6'
   const productId2 = '15b6fc6f-327a-4ec4-896f-486349e85a3d'
 
-  beforeAll((done) => {
-    // loadProducts(() => {
-    //   done();
-    // });  // ye tab use ho rha tha jab loadProducts use kar rhe the.
+  // beforeAll((done) => {
+  //   // loadProducts(() => {
+  //   //   done();
+  //   // });  // ye tab use ho rha tha jab loadProducts use kar rhe the.
 
-    loadProductsFetch().then(() => {
-      done();
-    })
+  //   loadProductsFetch().then(() => {
+  //     done();
+  //   })
 
-  });  
+  // });
+
+  beforeAll(async () => {
+    await loadProductsFetch();
+  })
 
   //Using beforeEach Hook --> is hook se ham iske under k code ko sare testk liye chala sakte hai code execute hone se pahle.
   //jaise ham yaha pe dono test me same cart de rahe hai. jo ki test hone se pahle use ho rha hai.

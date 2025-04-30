@@ -165,6 +165,7 @@ loadPage().then((val) => {
 // loadPage();
 
 
+/*
 async function loadPage() {
   try{
 
@@ -178,5 +179,20 @@ async function loadPage() {
   renderOrderSumary();
   renderPaymentSummary();
 }
+loadPage();
+*/
 
+async function loadPage() {
+  try{
+    await Promise.all([
+      loadProductsFetch(),
+      loadCartFetch()
+    ])
+  } catch (error) {
+    console.log('Unexpected error!\n Please try after some time');
+  }
+  
+  renderOrderSumary();
+  renderPaymentSummary();
+}
 loadPage();

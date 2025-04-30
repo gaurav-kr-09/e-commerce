@@ -46,3 +46,8 @@ export function calculateDeliveryDate(deliveryOption){
 
   return dateString;
 }
+
+export function orderDate(){
+  const today = dayjs();
+  return today.format('MMMM D');
+}
