@@ -97,8 +97,21 @@ async function loadPage() {
         addToCart(productId, Number(productQuantity));
         document.querySelector('.js-cart-quantity')
           .innerHTML = updateCartQuantity();
+
+          button.innerHTML = 'Added';
+          setTimeout(() => {
+            button.innerHTML = `
+            <img class="buy-again-icon" src="images/icons/buy-again.png">
+            <span class="buy-again-message">Buy it again</span>
+            `;
+          }, 1000)
       })
     })
 }
 
 loadPage();
+
+document.querySelector('.amazon-header-middle-section')
+  .addEventListener('click', () => {
+    window.location.href = 'amazon.html'
+  })

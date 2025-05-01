@@ -73,3 +73,8 @@ async function loadPage() {
 }
 
 loadPage();
+
+document.querySelector('.amazon-header-middle-section')
+  .addEventListener('click', () => {
+    window.location.href = 'amazon.html'
+  })
