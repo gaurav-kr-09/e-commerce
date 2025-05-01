@@ -83,8 +83,10 @@ async function loadPage() {
         return productsListHTML;
       }
   }else{
-    ordersHTML = `<h1>Oops! Your cart is empty.</h1>
+    ordersHTML = `<h1>Oops! you haven't ordered anything Yet.</h1>
+    <h2><a href="checkout.html">Click here to go to cart.</a></h2>
     <h2><a href="amazon.html">Click here to shop.</a></h2>
+
     `
   }
 
